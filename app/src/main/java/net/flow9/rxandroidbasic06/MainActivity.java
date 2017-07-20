@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 );
 
         RxView.clicks(btnRandom)
-                .map(event -> new Random().nextInt())
+                .map(event -> new Random().nextInt(100)+1)
                 .subscribe(
                         number -> textView.setText("random number="+number)
                 );
